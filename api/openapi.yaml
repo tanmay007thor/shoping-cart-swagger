@@ -1,0 +1,222 @@
+openapi: 3.0.0
+info:
+  title: Shopping Product
+  version: 1.0.0
+servers:
+- url: https://shopping-cart-njj9.onrender.com
+paths:
+  /api/v1/products:
+    get:
+      tags:
+      - default
+      summary: Get All Products
+      operationId: apiV1ProductsGET
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json: {}
+      x-swagger-router-controller: Default
+    post:
+      tags:
+      - default
+      summary: Create Catogary
+      operationId: apiV1ProductsPOST
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                name: catogary name
+                img: catogary image
+                creator: catogary creator
+                products:
+                - productId: cocacola
+                  name: product name
+                  productType: productType
+                  productQuantity: 4
+                  image: image
+                  price: 100
+                  size: large
+                  about this item: details............
+                  color: color
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json: {}
+      x-swagger-router-controller: Default
+  /api/v1/products/63e5e39354040579babd6f4c:
+    patch:
+      tags:
+      - default
+      summary: Patch Products Catogary
+      operationId: apiV1Products63e5e39354040579babd6f4cPATCH
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                name: catogary name
+                products:
+                - productId: productId
+                  name: product name
+                  productType: productType
+                  productQuantity: 4
+                  image: image
+                  price: 100
+                  size: large
+                  about this item: details............
+                  color: color
+                - productId: productId
+                  name: product name
+                  productType: productType
+                  productQuantity: 4
+                  image: image
+                  price: 100
+                  size: large
+                  about this item: details............
+                  color: color
+                - productId: productId
+                  name: product name
+                  productType: productType
+                  productQuantity: 4
+                  image: image
+                  price: 100
+                  size: large
+                  about this item: details............
+                  color: color
+                - productId: productId
+                  name: product name
+                  productType: productType
+                  productQuantity: 4
+                  image: image
+                  price: 100
+                  size: large
+                  about this item: details............
+                  color: color
+                - productId: productId
+                  name: product name
+                  productType: productType
+                  productQuantity: 4
+                  image: image
+                  price: 100
+                  size: large
+                  about this item: details............
+                  color: color
+                - productId: productId
+                  name: product name
+                  productType: productType
+                  productQuantity: 4
+                  image: image
+                  price: 100
+                  size: large
+                  about this item: details............
+                  color: color
+                - name: Product 2
+                  productType: Type 2
+                  productQuantity: 5
+                  image: image2.jpg
+                  price: 150
+                  size: Medium
+                  about this item: Details about product 2
+                  color: Green
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json: {}
+      x-swagger-router-controller: Default
+  /api/v1/products/catogary:
+    get:
+      tags:
+      - default
+      summary: 'Get All Catogary '
+      operationId: apiV1ProductsCatogaryGET
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json: {}
+      x-swagger-router-controller: Default
+  /api/v1/products/63e5e42054040579babd6f5d:
+    get:
+      tags:
+      - default
+      summary: Get Catogary By Id
+      operationId: apiV1Products63e5e42054040579babd6f5dGET
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json: {}
+      x-swagger-router-controller: Default
+  /api/v1/user:
+    get:
+      tags:
+      - default
+      summary: Delete User
+      operationId: apiV1UserGET
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json: {}
+      security:
+      - bearerAuth: []
+      x-swagger-router-controller: Default
+    post:
+      tags:
+      - default
+      summary: Create User
+      operationId: apiV1UserPOST
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                email: mikdfdfe@gmail.com
+                password: tanmay
+                username: miksdfsdfe
+                products:
+                - hey: there
+                cart:
+                - hey: there
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json: {}
+      x-swagger-router-controller: Default
+    patch:
+      tags:
+      - default
+      summary: Update Date
+      operationId: apiV1UserPATCH
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                products:
+                - hey: nobody is perfect
+                cart:
+                - hey: 'but i am '
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json: {}
+      security:
+      - bearerAuth: []
+      x-swagger-router-controller: Default
+components:
+  schemas: {}
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
